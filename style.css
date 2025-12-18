@@ -1,0 +1,21 @@
+body {
+    background-color: #fdfbf7; /* Crema suave */
+    font-family: 'Arial', sans-serif;
+    color: #3e2723; /* Café oscuro */
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    background-color: #6b4c35; /* Marrón medio */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+p {
+    font-size: 18px;
+    color: #5d4037;
+}
