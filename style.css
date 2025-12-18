@@ -1,21 +1,48 @@
-body {
-    background-color: #fdfbf7; /* Crema suave */
-    font-family: 'Arial', sans-serif;
-    color: #3e2723; /* Café oscuro */
-    text-align: center;
-    padding: 50px;
+body, html {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- TIPOGRAFÍA Y COLORES BASE --- */
+body {
+    background-color: #f2e8d5; /* El color crema/beige del fondo de tu logo */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #4a2c2a; /* Un tono café oscuro/rojizo tomado de la parte inferior del logo */
+}
+
+/* --- CLASES UTILITARIAS --- */
+/* Esto nos ayudará a centrar el contenido en pantallas grandes */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo para que no se estire demasiado en monitores gigantes */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* --- CABECERA (HEADER) --- */
+header {
+    padding: 20px 0; /* Espacio arriba y abajo */
+    text-align: center; /* Centramos el logo horizontalmente */
+    /* Opcional: una línea sutil abajo para separar */
+    border-bottom: 3px solid rgba(107, 76, 53, 0.1);
+}
+
+/* --- EL LOGO --- */
+.logo {
+    height: 100px; /* Definimos una altura fija. El ancho se ajusta solo. */
+    width: auto;
+    display: block; /* Asegura que se comporte como un bloque para centrarlo */
+    margin: 0 auto; /* Centrado extra de seguridad */
+}
+
+/* --- SECCIÓN DE BIENVENIDA TEMPORAL --- */
+.welcome-section {
+    text-align: center;
+    padding: 100px 20px;
 }
 
 h1 {
-    color: #ffffff;
-    background-color: #6b4c35; /* Marrón medio */
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-p {
-    font-size: 18px;
-    color: #5d4037;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #6b4c35; /* Marrón medio para el texto principal */
 }
