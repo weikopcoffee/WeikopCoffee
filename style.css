@@ -6,9 +6,9 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* Fuente moderna y limpia */
+    font-family: 'Montserrat', sans-serif;
     color: #333;
-    background-color: #fdfbf7; /* Tu color crema base */
+    background-color: #fdfbf7;
 }
 
 .container {
@@ -17,70 +17,16 @@ body {
     margin: 0 auto;
 }
 
-/* --- BARRA DE NAVEGACIÓN (NAVBAR) --- */
-.navbar {
-    position: absolute; /* Esto hace que flote SOBRE la imagen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 1000; /* Asegura que esté siempre encima */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent); /* Sombra suave arriba para leer mejor */
-}
-
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    height: 60px; /* Tamaño ajustado para elegancia */
-    width: auto;
-    border-radius: 50%; /* Opcional: si quieres el logo redondo */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff; /* Texto blanco para contrastar con la foto oscura */
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ffcc80; /* Color doradito al pasar el mouse */
-}
-
-/* Botón especial en el menú */
-.btn-nav {
-    border: 1px solid #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-}
-
-.btn-nav:hover {
-    background-color: #fff;
-    color: #000 !important;
-}
-
 /* --- HERO SECTION (PORTADA) --- */
 .hero {
-    height: 100vh; /* 100% de la altura de la pantalla (Full Screen) */
-    background-image: url('images/fondo-hero.png.png'); /* ¡TU FOTO DE FONDO! */
-    background-size: cover; /* Ajusta la foto para cubrir todo sin deformarse */
+    height: 100vh; /* Pantalla completa */
+    background-image: url('images/fondo-hero.jpg');
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto Parallax: la foto se queda quieta al bajar */
+    background-attachment: fixed; /* Efecto Parallax */
     display: flex;
-    align-items: center; /* Centra verticalmente */
+    align-items: center;
+    justify-content: center; /* Centrado perfecto */
     position: relative;
 }
 
@@ -90,52 +36,67 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente para oscurecer la foto */
+    background: rgba(0, 0, 0, 0.5); /* Un poco más oscuro para que resalte el logo */
 }
 
 .hero-content {
-    position: relative; /* Para que quede encima del overlay */
+    position: relative;
     z-index: 2;
     text-align: center;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que todo esté centrado verticalmente */
+}
+
+/* --- NUEVO ESTILO PARA EL LOGO CENTRAL --- */
+.hero-logo {
+    width: 120px; /* Tamaño del logo central */
+    height: 120px;
+    border-radius: 50%; /* Lo hace redondo */
+    border: 3px solid rgba(255, 255, 255, 0.3); /* Un borde sutil semitransparente */
+    margin-bottom: 30px; /* Espacio entre el logo y el texto */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    background-color: #fff; /* Fondo blanco por si tu logo tiene transparencias */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Título grande */
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 40px;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
-/* Botón principal */
+/* --- BOTÓN PRINCIPAL --- */
 .btn-main {
     text-decoration: none;
-    background-color: #c75b1e; /* Color naranja/tierra de tu marca */
+    background-color: #c75b1e;
     color: #fff;
     padding: 15px 40px;
     border-radius: 30px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: background 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn-main:hover {
     background-color: #a0400b;
-    transform: scale(1.05); /* Crece un poquito al pasar el mouse */
+    transform: translateY(-3px); /* Se eleva un poquito al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra al flotar */
 }
 
 /* --- SECCIÓN INTRO --- */
 .intro {
     padding: 80px 20px;
     text-align: center;
-    background-color: #fdfbf7;
 }
 
 .intro h2 {
@@ -148,5 +109,5 @@ body {
     color: #666;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.8;
 }
