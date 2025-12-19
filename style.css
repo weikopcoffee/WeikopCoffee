@@ -1,4 +1,13 @@
-/* --- CONFIGURACIÓN GENERAL --- */
+/* --- TUS COLORES OFICIALES --- */
+:root {
+    --arena-base: #E9DEC0;      /* Color crema para textos */
+    --violeta-profundo: #8F305D; 
+    --rojo-vital: #E73D3E;      /* Color del botón */
+    --amarillo-sol: #F3B411;     
+    --azul-conciencia: #085770;  
+}
+
+/* --- CONFIGURACIÓN BÁSICA --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +15,8 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+    /* Fuente secundaria: Space Grotesk */
+    font-family: 'Space Grotesk', sans-serif;
     background-color: #fdfbf7;
 }
 
@@ -17,16 +26,16 @@ body {
     margin: 0 auto;
 }
 
-/* --- HERO SECTION (PORTADA) --- */
+/* --- PORTADA (HERO) --- */
 .hero {
-    height: 100vh; /* Pantalla completa */
-    background-image: url('images/fondo-hero.jpg');
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-image: url('images/fondo-hero.jpg'); /* Tu foto de fondo */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto Parallax */
-    display: flex;
+    background-attachment: fixed;
+    display: flex; /* Esto centra todo */
     align-items: center;
-    justify-content: center; /* Centrado perfecto */
+    justify-content: center;
     position: relative;
 }
 
@@ -36,78 +45,75 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Un poco más oscuro para que resalte el logo */
+    background: rgba(0, 0, 0, 0.6); /* Capa oscura para que se lea el texto */
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: #fff;
+    color: var(--arena-base); /* Texto color Arena */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura que todo esté centrado verticalmente */
+    align-items: center;
 }
 
-/* --- NUEVO ESTILO PARA EL LOGO CENTRAL --- */
+/* LOGO CENTRAL */
 .hero-logo {
-    width: 120px; /* Tamaño del logo central */
-    height: 120px;
-    border-radius: 50%; /* Lo hace redondo */
-    border: 3px solid rgba(255, 255, 255, 0.3); /* Un borde sutil semitransparente */
-    margin-bottom: 30px; /* Espacio entre el logo y el texto */
-    object-fit: cover; /* Asegura que la imagen no se deforme */
-    background-color: #fff; /* Fondo blanco por si tu logo tiene transparencias */
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+    margin-bottom: 30px;
 }
 
-.hero-content h1 {
-    font-size: 3rem; /* Título grande */
-    line-height: 1.2;
+/* TEXTOS */
+h1 {
+    /* Fuente primaria: Quicksand */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700; /* Negrita */
+    font-size: 3.5rem; /* Tamaño gigante */
+    line-height: 1.1;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
-.hero-content p {
-    font-size: 1.3rem;
+p {
+    font-size: 1.4rem;
     margin-bottom: 40px;
     font-weight: 300;
     letter-spacing: 1px;
 }
 
-/* --- BOTÓN PRINCIPAL --- */
+/* --- BOTÓN ROJO --- */
 .btn-main {
     text-decoration: none;
-    background-color: #c75b1e;
-    color: #fff;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-weight: bold;
+    background-color: var(--rojo-vital); /* Tu rojo oficial */
+    color: var(--arena-base);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 50px; /* Bordes redondos */
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .btn-main:hover {
-    background-color: #a0400b;
-    transform: translateY(-3px); /* Se eleva un poquito al pasar el mouse */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra al flotar */
+    transform: scale(1.05); /* Crece un poco al pasar el mouse */
 }
 
-/* --- SECCIÓN INTRO --- */
+/* --- SECCIÓN DE ABAJO --- */
 .intro {
     padding: 80px 20px;
     text-align: center;
+    background-color: var(--arena-base);
 }
 
 .intro h2 {
-    color: #3e2723;
-    font-size: 2rem;
+    color: var(--violeta-profundo);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .intro p {
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.8;
+    color: var(--azul-conciencia);
+    font-size: 1.2rem;
 }
