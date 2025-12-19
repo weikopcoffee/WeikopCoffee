@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Weikop Coffee</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weikop Coffee | Cold Brew</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-             <img src="images/logo.png.jpg" alt="Logo Weikop Coffee" class="logo">
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo-link">
+                <img src="images/logo.jpg" alt="Weikop Logo" class="logo">
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#coldbrew">El Cold Brew</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container welcome-section">
-        <h1>Próximamente: La magia del café mexicano.</h1>
-    </main>
+    <section id="inicio" class="hero">
+        <div class="overlay"></div> <div class="container hero-content">
+            <h1>Descubre la magia<br>del café en frío.</h1>
+            <p>Artesanal. Intenso. Weikop.</p>
+            <a href="#coldbrew" class="btn-main">Probar Experiencia</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Más que café, un ritual.</h2>
+            <p>Al igual que un viaje transforma tu perspectiva, nuestro Cold Brew transforma tu paladar. Hecho lentamente para un sabor suave y profundo.</p>
+        </div>
+    </section>
+
 </body>
 </html>
