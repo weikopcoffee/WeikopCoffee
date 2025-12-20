@@ -3,33 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weikop Coffee | Cold Brew</title>
+    <title>Weikop Coffee | Ritual Consciente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand-group-link">
+                <div class="brand-group">
+                    <div class="nav-logo-circle">
+                        <img src="images/logon.png" alt="Logo Weikop" class="nav-logo">
+                    </div>
+                    <div class="brand-name">WEIKOP COFFEE</div>
+                </div>
+            </a>
+        </div>
+    </header>
+
     <section class="hero">
+        <div class="overlay"></div>
         <div class="container hero-content">
-            
-            <img src="images/logo.png" alt="Weikop Logo" class="hero-logo">
-            
-            <h1>Cold Brew<br>artesanal infusionado</h1>
-            
-            <p>Despierta, vive consciente y cuestiona lo establecido</p>
-            
-            <a href="#contacto" class="btn-main">PROBAR EXPERIENCIA</a>
+            <img src="images/logobe.png" alt="Ojo Weikop" class="hero-logo">
+            <h1>COLD BREW ARTESANAL INFUSIONADO</h1>
+            <p class="tagline">Despierta, vive consciente y cuestiona lo establecido</p>
+            <a href="filosofia.html" class="btn-main">CONOCE NUESTRA FILOSOFÍA</a>
         </div>
     </section>
 
     <section class="intro">
         <div class="container">
-            <h2>Nuestra Esencia</h2>
-            <p>Hecho lentamente para un sabor suave y profundo. Cada gota cuenta una historia de origen y pasión.</p>
+            <h2>CON CONSCIENCIA.</h2>
+            <p class="intro-text">
+                Café nacido del tiempo y la tierra.<br>
+                Suave, estable y hecho para crear conexión.
+            </p>
+
+            <div class="coldbrew-feature-block">
+                <div class="cb-content-inner">
+                    <h3>¿QUÉ ES EL COLDBREW?</h3>
+                    <div class="cb-divider-glow"></div>
+                    <p>El cold brew es café extraído en frío, a través de un proceso lento y cuidadoso.</p>
+                    <p>Esta extracción reduce la acidez y el amargor, dando como resultado una bebida más suave, limpia y fácil de tomar.</p>
+                    <p>Su perfil estable lo convierte en la base ideal para infusionarse con ingredientes naturales, sin perder su esencia.</p>
+                </div>
+                <div class="cb-visual-inner">
+                    <img src="images/coldbrewd.png" alt="Vaso Cold Brew" class="cb-icon-float">
+                </div>
+            </div>
+
+            <div class="rituals-container-vertical">
+                
+                <div class="ritual-card-vertical">
+                    <img src="images/granos.png" alt="Granos de Café" class="ritual-img-large">
+                    <h3>WK ORIGINAL</h3>
+                    <p class="ritual-category">Ritual Original</p>
+                    <ul class="interactive-list">
+                        <li><span class="icon">☕</span> Cold brew artesanal extraído en frío</li>
+                        <li><span class="icon">☕</span> Perfil suave, con menor acidez y amargor</li>
+                        <li><span class="icon">☕</span> Energía más estable, sin picos agresivos</li>
+                        <li><span class="icon">☕</span> Pensado para beberse con calma</li>
+                    </ul>
+                    <div class="pricing-divider"></div>
+                    <div class="pricing-block">
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$111</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$333</span></div>
+                    </div>
+                </div>
+
+                <div class="ritual-card-vertical">
+                    <img src="images/naranja.png" alt="Naranja" class="ritual-img-large">
+                    <h3>WK CITRUS</h3>
+                    <p class="ritual-category">Ritual Infusionado</p>
+                    <ul class="interactive-list">
+                        <li><span class="icon">🍊</span> Cold brew artesanal infusionado con naranja natural</li>
+                        <li><span class="icon">🍊</span> Perfil fresco y ligero que realza el carácter del café</li>
+                        <li><span class="icon">🍊</span> Energía equilibrada con una sensación más viva</li>
+                        <li><span class="icon">🍊</span> Ideal para acompañar el movimiento del día</li>
+                    </ul>
+                    <div class="pricing-divider"></div>
+                    <div class="pricing-block">
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$133</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$377</span></div>
+                    </div>
+                </div>
+
+                <div class="ritual-card-vertical">
+                    <img src="images/cordyceps.png" alt="Cordyceps" class="ritual-img-large">
+                    <h3>WK RISE</h3>
+                    <p class="ritual-category">Ritual con Adaptógeno</p>
+                    <ul class="interactive-list">
+                        <li><span class="icon">🍄</span> Cold brew artesanal infusionado con naranja y cordyceps</li>
+                        <li><span class="icon">🍄</span> Perfil profundo y balanceado, sin perder suavidad</li>
+                        <li><span class="icon">🍄</span> Sensación más sostenida para días largos</li>
+                        <li><span class="icon">🍄</span> Diseñado para acompañar claridad y presencia</li>
+                    </ul>
+                    <div class="pricing-divider"></div>
+                    <div class="pricing-block">
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$166</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$444</span></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <section class="how-to-order-section">
+        <div class="container">
+            <h2>CÓMO PEDIR</h2>
+            <p class="shipping-note">(Envío gratis a partir de 3L)</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Elige tu WK</h4>
+                    <p>Original, Citrus o Rise.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Escríbenos</h4>
+                    <p>Mándanos un mensaje por WhatsApp para confirmar tu pedido.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Recibe o Visita</h4>
+                    <p>Coordinamos entrega a domicilio en Los Cabos.<br>
+                    📍 Visítanos en <strong>Las Californias Centro Holístico</strong>.</p>
+                </div>
+            </div>
+
+            <div class="stock-notice">
+                <i class="fa-solid fa-triangle-exclamation"></i> Stock limitado semanal
+            </div>
+            
+            <a href="https://wa.me/526241554267?text=Hola!!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20cold%20brew%20%E2%98%95%EF%B8%8F%E2%9C%A8" target="_blank" class="btn-main btn-order-section">HACER PEDIDO AHORA</a>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>PREGUNTAS FRECUENTES</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary>¿Tiene azúcar o endulzantes añadidos? <i class="fa-solid fa-chevron-down arrow-icon"></i></summary>
+                    <div class="faq-answer"><p>No. Nuestro cold brew es extraído en frío e infusionado únicamente con ingredientes naturales. Sin azúcar, sin jarabes, sin endulzantes artificiales.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto dura el producto? <i class="fa-solid fa-chevron-down arrow-icon"></i></summary>
+                    <div class="faq-answer"><p>Refrigerado, mantiene su calidad por 21 días.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cómo se toma el cold brew? <i class="fa-solid fa-chevron-down arrow-icon"></i></summary>
+                    <div class="faq-answer"><p>Puedes tomarlo directo, con hielo o diluirlo ligeramente según tu preferencia.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Qué diferencia tiene con el café tradicional? <i class="fa-solid fa-chevron-down arrow-icon"></i></summary>
+                    <div class="faq-answer"><p>El cold brew se extrae en frío y con tiempo. Esto reduce la acidez y el amargor, ofreciendo una bebida más suave y de energía más estable.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Qué es WK Rise / qué es el cordyceps? <i class="fa-solid fa-chevron-down arrow-icon"></i></summary>
+                    <div class="faq-answer">
+                        <p>WK Rise es cold brew infusionado con naranja y cordyceps.</p>
+                        <p>El cordyceps es un hongo adaptógeno que ha sido estudiado por su relación con la producción natural de ATP, la principal fuente de energía celular.</p>
+                        <p>Tradicionalmente se ha asociado a:</p>
+                        <ul class="faq-list">
+                            <li>Mayor vitalidad</li>
+                            <li>Mejor uso del oxígeno</li>
+                            <li>Acompañamiento del rendimiento físico</li>
+                            <li>Recuperación más eficiente después del esfuerzo</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-footer">
+        <div class="container">
+            <h2 class="footer-cta">¿LISTO PARA DESPERTAR?</h2>
+            <p class="footer-sub">Escríbenos y sé parte de nuestra tribu.</p>
+            <div class="footer-buttons">
+                <a href="https://wa.me/526241554267?text=Hola!!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20cold%20brew%20%E2%98%95%EF%B8%8F%E2%9C%A8" target="_blank" class="btn-footer whatsapp"><i class="fab fa-whatsapp"></i> Hablemos por WhatsApp</a>
+                <a href="https://instagram.com/weikop.coffee" target="_blank" class="btn-footer instagram"><i class="fab fa-instagram"></i> Hablemos por Instagram</a>
+            </div>
+            <p class="copyright">© 2025 Weikop Coffee. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/526241554267?text=Hola!!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20cold%20brew%20%E2%98%95%EF%B8%8F%E2%9C%A8" target="_blank" class="float-chat-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-4-10.5-6.8z"/></svg>
+    </a>
 
 </body>
 </html>

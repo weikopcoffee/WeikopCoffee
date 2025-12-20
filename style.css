@@ -1,119 +1,379 @@
-/* --- TUS COLORES OFICIALES --- */
+/* --- ADN DE COLOR WEIKOP --- */
 :root {
     --arena-base: #E9DEC0;      
-    --violeta-profundo: #8F305D; 
-    --rojo-vital: #E73D3E;      
-    --amarillo-sol: #F3B411;     
-    --azul-conciencia: #085770;  
+    --tierra-oscura: #2A2422;   
+    --arcilla-calida: #C47C53;  
+    --verde-oliva: #6E7C63;     
+    --rojo-ritual: #C43A3A;     
+    --ocre-suave: #D9A441;      
+    --negro-logo: #000000;
 }
 
-/* --- CONFIGURACIÓN BÁSICA --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    /* Todo el fondo de la página será color Arena */
     background-color: var(--arena-base);
     font-family: 'Space Grotesk', sans-serif;
-    color: var(--azul-conciencia); /* Color por defecto de los textos */
+    color: var(--tierra-oscura);
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-/* --- PORTADA (HERO) --- */
+/* --- CABECERA --- */
+.navbar {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    padding: 30px 0; z-index: 10;
+}
+.nav-content { display: flex; justify-content: flex-start; align-items: center; }
+.brand-group-link { text-decoration: none; }
+.brand-group { display: flex; align-items: center; gap: 15px; }
+
+.nav-logo-circle {
+    background-color: var(--arena-base);
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    padding: 2px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.nav-logo { width: 100%; height: auto; }
+.brand-name {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.1rem; letter-spacing: 3px;
+    color: var(--arena-base); text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar-dark .brand-name-dark { color: var(--tierra-oscura); text-shadow: none; }
+.navbar-dark .nav-logo-circle { box-shadow: 0 2px 10px rgba(42, 36, 34, 0.2); }
+
+/* --- HERO --- */
 .hero {
-    /* Altura mínima: Ocupa casi toda la pantalla pero deja ver un poco abajo */
-    min-height: 90vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 20px; /* Un poco de aire arriba y abajo */
+    min-height: 100vh;
+    background-image: url('images/fondo-hero.png'); 
+    background-size: cover; background-position: center; background-attachment: fixed;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; position: relative;
+    padding: 100px 0;
 }
-
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(42, 36, 34, 0.4); 
+}
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px; /* Para que el texto no se estire demasiado a los lados */
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; width: 100%; padding: 0 20px;
 }
-
-/* LOGO */
 .hero-logo {
-    width: 160px; /* Tamaño ideal */
-    height: auto;
-    margin-bottom: 40px;
+    width: 320px; height: auto; margin-bottom: 30px;
+    object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
 }
-
-/* TÍTULO PRINCIPAL */
 h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 4rem; /* Letra bien grande e impactante */
-    line-height: 1.1;
-    margin-bottom: 25px;
-    
-    /* COLOR DEL TÍTULO: VIOLETA PROFUNDO (Resalta mucho sobre Arena) */
-    color: var(--violeta-profundo); 
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    color: var(--arena-base); font-size: 3.5vw;
+    margin-bottom: 20px; text-transform: uppercase;
+    letter-spacing: 4px; line-height: 1.1;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
-
-/* FRASES / PÁRRAFOS */
-p {
-    font-size: 1.5rem;
-    margin-bottom: 50px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    
-    /* COLOR DEL TEXTO: AZUL CONCIENCIA (Elegante y legible) */
-    color: var(--azul-conciencia);
+.tagline {
+    font-size: 1.4rem; font-weight: 300; color: var(--arena-base);
+    margin-bottom: 50px; letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
-
-/* --- BOTÓN --- */
 .btn-main {
-    text-decoration: none;
-    display: inline-block;
-    
-    /* FONDO DEL BOTÓN: ROJO VITAL */
-    background-color: var(--rojo-vital);
-    
-    /* TEXTO DEL BOTÓN: ARENA (Para conectar con el fondo) */
+    text-decoration: none; 
+    background-color: var(--rojo-ritual); 
     color: var(--arena-base);
-    
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    padding: 20px 50px; /* Botón grande y cómodo */
-    border-radius: 50px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(143, 48, 93, 0.2); /* Sombra suave violeta */
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    padding: 20px 50px; border-radius: 50px; text-transform: uppercase;
+    font-size: 0.9rem; letter-spacing: 2px;
+    transition: all 0.4s ease; box-shadow: 0 0 20px rgba(196, 58, 58, 0.3);
 }
-
 .btn-main:hover {
-    transform: translateY(-5px); /* Se mueve hacia arriba */
-    background-color: var(--violeta-profundo); /* Cambia a violeta al pasar el mouse */
-    color: #fff;
-    cursor: pointer;
+    transform: translateY(-3px); 
+    background-color: var(--arcilla-calida); 
+    color: var(--arena-base);
 }
 
-/* --- SECCIÓN INFERIOR --- */
+/* --- INTRO --- */
 .intro {
-    padding: 80px 20px;
+    padding: 80px 20px 0px; 
     text-align: center;
-    /* Línea decorativa arriba para separar sutilmente */
-    border-top: 2px solid rgba(143, 48, 93, 0.1); 
+    background-color: var(--arena-base);
+    color: var(--tierra-oscura);
+}
+.intro h2 {
+    color: var(--tierra-oscura); 
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 3px; font-size: 3rem; 
+    margin-bottom: 30px;
+}
+.intro-text {
+    font-size: 1.4rem; line-height: 1.6; max-width: 800px; margin: 0 auto 60px; font-weight: 500;
 }
 
-.intro h2 {
-    color: var(--violeta-profundo);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* --- BLOQUE EDUCATIVO --- */
+.coldbrew-feature-block {
+    background-color: var(--tierra-oscura); 
+    color: var(--arena-base); 
+    border-radius: 40px; padding: 60px; margin: 80px auto; max-width: 1100px;
+    display: flex; align-items: center; justify-content: space-between; gap: 50px;
+    box-shadow: 0 20px 50px rgba(42, 36, 34, 0.3); position: relative; overflow: hidden; 
+}
+.cb-content-inner { flex: 2; text-align: left; }
+.cb-content-inner h3 {
+    color: var(--ocre-suave); font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem; margin-bottom: 25px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px;
+}
+.cb-divider-glow {
+    width: 60px; height: 4px; background-color: var(--arcilla-calida); margin-bottom: 30px; border-radius: 2px;
+}
+.cb-content-inner p { font-size: 1.2rem; line-height: 1.8; margin-bottom: 20px; opacity: 0.9; font-weight: 300; }
+.cb-visual-inner { flex: 1; display: flex; justify-content: center; align-items: center; }
+.cb-icon-float {
+    width: 100%; max-width: 330px; height: auto; object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(233, 222, 192, 0.1));
+    transform: rotate(5deg); transition: transform 0.4s ease;
+}
+.coldbrew-feature-block:hover .cb-icon-float { transform: rotate(0deg) scale(1.05); }
+
+/* --- RITUALES --- */
+.rituals-container-vertical {
+    display: flex; flex-direction: column; align-items: center; gap: 60px; margin-top: 80px; margin-bottom: 80px;
+}
+.ritual-card-vertical {
+    width: 100%; max-width: 700px; padding: 40px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 30px; box-shadow: 0 10px 30px rgba(42, 36, 34, 0.05);
+    text-align: center; 
+}
+.ritual-img-large {
+    width: 150px; height: 150px; object-fit: contain;
+    margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;
+}
+.ritual-card-vertical h3 {
+    color: var(--tierra-oscura); font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px; font-size: 2rem; margin-bottom: 5px;
+}
+.ritual-category {
+    color: var(--arcilla-calida); font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem;
+    margin-bottom: 30px; font-weight: 500;
+}
+.interactive-list {
+    list-style: none; padding: 0; margin: 0;
+    text-align: left; display: inline-block; width: 100%; margin-bottom: 30px;
+}
+.interactive-list li {
+    background-color: transparent;
+    padding: 15px 20px; margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 1.1rem; color: var(--tierra-oscura); font-weight: 500;
+    display: flex; align-items: center; gap: 15px;
+    cursor: default; transition: all 0.3s ease;
+}
+.interactive-list li:hover {
+    background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transform: translateX(10px); color: var(--arcilla-calida);
+}
+.icon {
+    color: var(--verde-oliva); background-color: rgba(110, 124, 99, 0.1); 
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 1.2rem; flex-shrink: 0;
+}
+.pricing-divider { height: 1px; background-color: rgba(42, 36, 34, 0.2); width: 80%; margin: 0 auto 20px; }
+.pricing-block { display: flex; justify-content: space-around; align-items: center; gap: 20px; }
+.price-item { display: flex; flex-direction: column; align-items: center; }
+.size { font-size: 1rem; color: var(--tierra-oscura); opacity: 0.8; margin-bottom: 5px; }
+.price { font-size: 1.5rem; color: var(--rojo-ritual); font-weight: 700; }
+
+/* --- CÓMO PEDIR --- */
+.how-to-order-section {
+    padding: 80px 20px; background-color: var(--arena-base); text-align: center;
+}
+.how-to-order-section h2 {
+    color: var(--tierra-oscura); font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 3px; font-size: 2.5rem; margin-bottom: 20px;
+}
+.shipping-note {
+    font-size: 1.1rem; color: var(--arcilla-calida); margin-bottom: 50px; font-weight: 500;
+}
+.steps-grid {
+    display: flex; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto 40px; flex-wrap: wrap;
+}
+.step-card {
+    flex: 1; min-width: 250px; background-color: rgba(255, 255, 255, 0.3);
+    padding: 30px; border-radius: 20px; position: relative; border: 1px solid rgba(42, 36, 34, 0.05);
+}
+.step-number {
+    background-color: var(--rojo-ritual); color: var(--arena-base);
+    width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    font-weight: 700; font-size: 1.2rem; margin: 0 auto 20px;
+}
+.step-card h4 {
+    color: var(--tierra-oscura); font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase;
+}
+.step-card p { font-size: 1rem; color: var(--tierra-oscura); opacity: 0.9; }
+.stock-notice {
+    display: inline-block; background-color: rgba(217, 164, 65, 0.2); color: var(--tierra-oscura);
+    padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+    margin-bottom: 40px; border: 1px solid var(--ocre-suave);
+}
+.btn-order-section { padding: 15px 40px; font-size: 0.9rem; }
+
+/* --- FAQ --- */
+.faq-section {
+    padding: 80px 20px 80px;
+    background-color: var(--arena-base);
+}
+.faq-section h2 {
+    color: var(--tierra-oscura); font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 3px; font-size: 2.5rem; text-align: center; margin-bottom: 50px;
+}
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(42, 36, 34, 0.1); padding: 25px 0; }
+.faq-item summary {
+    list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    font-size: 1.3rem; font-weight: 500; color: var(--tierra-oscura); transition: color 0.3s ease;
+}
+.faq-item summary:hover { color: var(--arcilla-calida); }
+.arrow-icon { font-size: 1rem; transition: transform 0.3s ease; color: var(--verde-oliva); }
+.faq-item[open] .arrow-icon { transform: rotate(180deg); }
+.faq-answer { margin-top: 15px; font-size: 1.1rem; line-height: 1.6; color: var(--tierra-oscura); opacity: 0.8; padding-right: 20px; }
+.faq-list { list-style: none; padding-left: 20px; margin-top: 10px; }
+.faq-list li { margin-bottom: 8px; position: relative; }
+.faq-list li::before { content: '◆'; color: var(--arcilla-calida); font-size: 0.8rem; position: absolute; left: -20px; top: 0px; }
+
+/* --- FOOTER --- */
+.contact-footer {
+    background-color: var(--tierra-oscura); color: var(--arena-base);
+    padding: 80px 20px 40px; text-align: center;
+}
+.footer-cta {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.5rem;
+    margin-bottom: 10px; color: var(--arena-base);
+}
+.footer-sub { font-size: 1.2rem; margin-bottom: 50px; opacity: 0.9; }
+.footer-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 60px; }
+.btn-footer {
+    text-decoration: none; padding: 15px 35px; border-radius: 50px;
+    font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px;
+    transition: all 0.3s ease; border: 2px solid var(--arena-base); color: var(--arena-base);
+}
+.btn-footer.whatsapp:hover {
+    background-color: #25D366; border-color: #25D366; color: #fff; transform: translateY(-5px);
+}
+.btn-footer.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent; color: #fff; transform: translateY(-5px);
+}
+.copyright { font-size: 0.8rem; opacity: 0.6; margin-top: 20px; }
+
+/* --- PÁGINA DE FILOSOFÍA --- */
+.philosophy-section {
+    background: radial-gradient(ellipse at center, #F2EBD9 0%, var(--arena-base) 100%);
+    padding: 150px 20px 100px; min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+}
+.philosophy-box {
+    background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px);
+    padding: 80px 60px; border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(42, 36, 34, 0.1); max-width: 900px; text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+}
+.philosophy-box h1 {
+    color: var(--tierra-oscura); font-family: 'Space Grotesk', sans-serif; font-weight: 700; 
+    text-transform: uppercase; letter-spacing: 5px; font-size: 3rem; margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(42, 36, 34, 0.1);
+}
+.phil-subtitle {
+    color: var(--arcilla-calida); font-family: 'Space Grotesk', sans-serif; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 3px; font-size: 1.5rem; margin-bottom: 70px;
+    position: relative; display: inline-block;
+}
+.phil-subtitle::after {
+    content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 2px; background-color: var(--arcilla-calida);
+}
+.intro-body p { font-size: 1.3rem; line-height: 1.9; margin-bottom: 25px; color: var(--tierra-oscura); font-weight: 300; }
+.intro-body strong { font-weight: 700; color: var(--arcilla-calida); }
+
+/* Highlight Especial Propósito - MARCO ELEGANTE TIERRA */
+.phil-highlight-box {
+    background-color: rgba(233, 222, 192, 0.3); /* Arena muy transparente */
+    border: 2px solid var(--tierra-oscura); /* MARCO TIERRA OSCURA */
+    border-radius: 30px; padding: 50px; margin: 60px 0;
+    text-align: center;
+}
+.brand-highlight { 
+    color: var(--arcilla-calida); /* Arcilla para el nombre */
+    font-weight: 700; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px;
+}
+.phil-highlight-box p { 
+    font-size: 1.5rem; line-height: 1.7; font-weight: 500; margin-bottom: 25px; 
+    color: var(--tierra-oscura);
+}
+.phil-subtext { 
+    font-size: 1.2rem !important; opacity: 0.9; font-weight: 300 !important; margin-bottom: 0 !important;
+    color: var(--tierra-oscura) !important;
+}
+
+/* Misión y Visión Grid - TARJETAS OSCURAS CON TÍTULOS OCRE */
+.mission-vision-grid { display: flex; gap: 30px; margin: 60px 0; }
+.mv-card {
+    flex: 1; padding: 40px; border-radius: 25px; text-align: center;
+    background-color: var(--tierra-oscura); /* FONDO TIERRA OSCURA */
+    box-shadow: 0 15px 30px rgba(42, 36, 34, 0.3);
+    color: var(--arena-base); /* Texto claro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.mv-card:hover { transform: translateY(-7px); box-shadow: 0 20px 40px rgba(42, 36, 34, 0.4); }
+
+.mv-card h3 {
+    color: var(--ocre-suave); /* TÍTULO AMARILLO/OCRE */
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.4rem; margin-bottom: 20px; letter-spacing: 3px; text-transform: uppercase;
+}
+.mv-card p { font-size: 1.2rem; line-height: 1.6; font-weight: 500; opacity: 0.95; }
+
+.phil-belief { font-style: italic; font-size: 1.4rem; color: var(--tierra-oscura); font-weight: 500; margin-bottom: 0; }
+.phil-footer-action { margin-top: 60px; }
+.btn-phil-back { display: inline-block; }
+
+/* --- FLOTANTE --- */
+.float-chat-btn {
+    position: fixed; bottom: 30px; right: 30px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background-color: var(--rojo-ritual); color: var(--arena-base);
+    display: flex; justify-content: center; align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 1000;
+    transition: all 0.3s ease; border: 2px solid var(--arena-base);
+}
+.float-chat-btn svg { width: 32px; height: 32px; fill: var(--arena-base); }
+.float-chat-btn:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #25D366; color: #fff; border-color: #fff;
+}
+.float-chat-btn:hover svg { fill: #fff; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    .coldbrew-feature-block { flex-direction: column-reverse; text-align: center; padding: 40px 25px; gap: 30px; }
+    .cb-content-inner { text-align: center; }
+    .cb-divider-glow { margin: 0 auto 20px; }
+    .cb-icon-float { max-width: 250px; }
+    .steps-grid { flex-direction: column; }
+    .step-card { margin-bottom: 20px; }
+    .philosophy-box { padding: 50px 25px; }
+    .mission-vision-grid { flex-direction: column; }
+    .phil-highlight-box, .mv-card { text-align: center; padding: 30px; }
 }
