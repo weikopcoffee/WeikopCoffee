@@ -6,7 +6,7 @@
     <title>Weikop Coffee | Ritual Consciente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -31,7 +31,11 @@
             <img src="images/logobe.png" alt="Ojo Weikop" class="hero-logo">
             <h1>COLD BREW ARTESANAL INFUSIONADO</h1>
             <p class="tagline">Despierta, vive consciente y cuestiona lo establecido</p>
-            <a href="filosofia.html" class="btn-main">CONOCE NUESTRA FILOSOFÍA</a>
+            
+            <div class="hero-buttons">
+                <a href="cafe.html" class="btn-main">DESCUBRE NUESTRO CAFÉ</a>
+                <a href="filosofia.html" class="btn-main">CONOCE NUESTRA FILOSOFÍA</a>
+            </div>
         </div>
     </section>
 
@@ -43,18 +47,26 @@
                 Suave, estable y hecho para crear conexión.
             </p>
 
-            <div class="coldbrew-feature-block">
-                <div class="cb-content-inner">
+            <details class="coldbrew-feature-block">
+                <summary class="cb-summary">
                     <h3>¿QUÉ ES EL COLDBREW?</h3>
+                    <i class="fa-solid fa-chevron-down cb-toggle-icon"></i>
+                </summary>
+                
+                <div class="cb-expanded-wrapper">
                     <div class="cb-divider-glow"></div>
-                    <p>El cold brew es café extraído en frío, a través de un proceso lento y cuidadoso.</p>
-                    <p>Esta extracción reduce la acidez y el amargor, dando como resultado una bebida más suave, limpia y fácil de tomar.</p>
-                    <p>Su perfil estable lo convierte en la base ideal para infusionarse con ingredientes naturales, sin perder su esencia.</p>
+                    <div class="cb-flex-container">
+                        <div class="cb-content-inner">
+                            <p>El cold brew es café extraído en frío, a través de un proceso lento y cuidadoso.</p>
+                            <p>Esta extracción reduce la acidez y el amargor, dando como resultado una bebida más suave, limpia y fácil de tomar.</p>
+                            <p>Su perfil estable lo convierte en la base ideal para infusionarse con ingredientes naturales, sin perder su esencia.</p>
+                        </div>
+                        <div class="cb-visual-inner">
+                            <img src="images/coldbrewd.png" alt="Vaso Cold Brew" class="cb-icon-float">
+                        </div>
+                    </div>
                 </div>
-                <div class="cb-visual-inner">
-                    <img src="images/coldbrewd.png" alt="Vaso Cold Brew" class="cb-icon-float">
-                </div>
-            </div>
+            </details>
 
             <div class="rituals-container-vertical">
                 
@@ -70,8 +82,8 @@
                     </ul>
                     <div class="pricing-divider"></div>
                     <div class="pricing-block">
-                        <div class="price-item"><span class="size">300 ml</span><span class="price">$111</span></div>
-                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$333</span></div>
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$180</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$550</span></div>
                     </div>
                 </div>
 
@@ -87,12 +99,12 @@
                     </ul>
                     <div class="pricing-divider"></div>
                     <div class="pricing-block">
-                        <div class="price-item"><span class="size">300 ml</span><span class="price">$133</span></div>
-                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$377</span></div>
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$250</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$750</span></div>
                     </div>
                 </div>
 
-                <div class="ritual-card-vertical">
+                <div class="ritual-card-vertical ritual-card-rise">
                     <img src="images/cordyceps.png" alt="Cordyceps" class="ritual-img-large">
                     <h3>WK RISE</h3>
                     <p class="ritual-category">Ritual con Adaptógeno</p>
@@ -103,9 +115,10 @@
                         <li><span class="icon">🍄</span> Diseñado para acompañar claridad y presencia</li>
                     </ul>
                     <div class="pricing-divider"></div>
+                    
                     <div class="pricing-block">
-                        <div class="price-item"><span class="size">300 ml</span><span class="price">$166</span></div>
-                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$444</span></div>
+                        <div class="price-item"><span class="size">300 ml</span><span class="price">$300</span></div>
+                        <div class="price-item"><span class="size">1 Litro</span><span class="price">$900</span></div>
                     </div>
                 </div>
 
@@ -134,7 +147,7 @@
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h4>Recibe o Visita</h4>
-                    <p>Coordinamos entrega a domicilio en Los Cabos.<br>
+                    <p>Entrega a domicilio en Los Cabos.<br>
                     📍 Visítanos en <strong>Las Californias Centro Holístico</strong>.</p>
                 </div>
             </div>
